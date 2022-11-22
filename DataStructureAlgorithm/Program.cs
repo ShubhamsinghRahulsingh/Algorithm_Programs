@@ -10,7 +10,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -21,6 +21,11 @@ class Program
                     search.BinarySearchWord("bridgelabz");
                     break;
                 case 2:
+                    InsertionSort sort=new InsertionSort();
+                    sort.ReadTextFiles(binaryTextPath);
+                    sort.Sort();
+                    break;
+                case 3:
                     flag = false;
                     break;
             }
