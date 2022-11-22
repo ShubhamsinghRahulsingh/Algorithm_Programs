@@ -11,7 +11,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -33,6 +33,10 @@ class Program
                     bubblesort.Sort(array);
                     break;
                 case 4:
+                    Anagram check = new Anagram();
+                    check.CheckAnagram("heart", "earth");
+                    break;
+                case 5:
                     flag = false;
                     break;
             }
