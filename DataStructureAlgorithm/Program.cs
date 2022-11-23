@@ -8,12 +8,13 @@ class Program
     public static void Main(string[] args)
     {
         int[] array = { 5, 1, 8, 7, 2, 4, 6, 9, 3, 10 };
+        int[] array2 = { 26, 20, 54, 34, 12, 39, 19, 45 };
         Console.WriteLine("Welcome to the Algorithm Programs");
         bool flag = true;
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.PrimeNumbersBetweenGivenRange\n7.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -43,6 +44,10 @@ class Program
                     replace.ReplaceString();
                     break;
                 case 6:
+                    PrimeNumbers range = new PrimeNumbers();
+                    range.PrimeNumberRange(1, 100);
+                    break;
+                case 7:
                     flag = false;
                     break;
             }
