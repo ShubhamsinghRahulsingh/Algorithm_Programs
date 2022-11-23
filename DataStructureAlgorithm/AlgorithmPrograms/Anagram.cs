@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructureAlgorithm
+namespace DataStructureAlgorithm.AlgorithmPrograms
 {
     public class Anagram
     {
@@ -13,9 +13,9 @@ namespace DataStructureAlgorithm
             string input1 = Test(inputstr1);
             string input2 = Test(inputstr2);
             if (input1.Equals(input2))
-                Console.WriteLine(inputstr1+" is an Anagram of "+inputstr2);
+                Console.WriteLine(inputstr1 + " is an Anagram of " + inputstr2);
             else
-                Console.WriteLine(inputstr1+" is not an Anagram of "+inputstr2);
+                Console.WriteLine(inputstr1 + " is not an Anagram of " + inputstr2);
         }
         public string Test(string input)
         {

@@ -4,27 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructureAlgorithm
+namespace DataStructureAlgorithm.AlgorithmPrograms
 {
     public class BinarySearch
     {
         string[] binaryArray;
         public void ReadFile(string filepath)
         {
-            string words=File.ReadAllText(filepath);
+            string words = File.ReadAllText(filepath);
             binaryArray = words.Split(",");
         }
         public void BinarySearchWord(string search)
         {
-            foreach(var word in binaryArray)
+            foreach (var word in binaryArray)
             {
-                if(word.Equals(search))
+                if (word.Equals(search))
                 {
-                    Console.WriteLine("Word "+search+" is found in the text file");
+                    Console.WriteLine("Word " + search + " is found in the text file");
                     return;
                 }
             }
-            Console.WriteLine("Word " +search +" is not found in the given text file");
+            Console.WriteLine("Word " + search + " is not found in the given text file");
         }
     }
 }

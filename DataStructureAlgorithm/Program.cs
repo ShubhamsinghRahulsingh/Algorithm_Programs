@@ -1,8 +1,10 @@
 ﻿using System;
+using DataStructureAlgorithm.AlgorithmPrograms;
+
 namespace DataStructureAlgorithm;
 class Program
 {
-    public static string binaryTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\BinarySearch.txt";
+    public static string binaryTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\AlgorithmPrograms\Files\BinarySearch.txt";
     public static void Main(string[] args)
     {
         int[] array = { 5, 1, 8, 7, 2, 4, 6, 9, 3, 10 };
@@ -11,7 +13,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -37,6 +39,10 @@ class Program
                     check.CheckAnagram("heart", "earth");
                     break;
                 case 5:
+                    MessageDemonstration replace=new MessageDemonstration();
+                    replace.ReplaceString();
+                    break;
+                case 6:
                     flag = false;
                     break;
             }

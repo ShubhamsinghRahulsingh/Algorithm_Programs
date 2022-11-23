@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructureAlgorithm
+namespace DataStructureAlgorithm.AlgorithmPrograms
 {
     public class BubbleSort
     {
@@ -12,7 +12,7 @@ namespace DataStructureAlgorithm
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int j = 0; j < array.Length - 1-i; j++)
+                for (int j = 0; j < array.Length - 1 - i; j++)
                 {
                     if (array[j] > array[j + 1])
                     {
