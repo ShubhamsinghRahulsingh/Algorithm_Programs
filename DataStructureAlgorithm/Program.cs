@@ -1,5 +1,6 @@
 ﻿using System;
 using DataStructureAlgorithm.AlgorithmPrograms;
+using DataStructureAlgorithm.DataStructurePrograms;
 
 namespace DataStructureAlgorithm;
 class Program
@@ -14,7 +15,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.PrimeNumbersBetweenGivenRange\n7.CheckAnagramAndPalindrome\n8.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.PrimeNumbersBetweenGivenRange\n7.CheckAnagramAndPalindrome\n8.UnOrdered List\n9.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -53,6 +54,10 @@ class Program
                     primePalindrome.CheckAnagramPalindrome();
                     break;
                 case 8:
+                    UnOrderedList unOrderedList = new UnOrderedList();
+                    unOrderedList.ReadAllTextFile(binaryTextPath);
+                    break;
+                case 9:
                     flag = false;
                     break;
             }
