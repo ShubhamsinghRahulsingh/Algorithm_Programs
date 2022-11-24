@@ -8,6 +8,11 @@ namespace DataStructureAlgorithm.AlgorithmPrograms
 {
     public class PrimeNumbers
     {
+        public List<int> primeNumbers=new List<int>();
+        public List<int> primePalindrome = new List<int>();
+        public List<int> primeAnagram = new List<int>();
+
+
         public void PrimeNumberRange(int minNum,int maxNum)
         {
             Console.Write("Pime Numbers between given range are:");
@@ -27,16 +32,47 @@ namespace DataStructureAlgorithm.AlgorithmPrograms
                     }
                     if(isPrime==true)
                     {
-                        Console.Write(i + " ");
+                        primeNumbers.Add(i);
                     }
                 }
                 else
                 {
                     if(i==2)
-                        Console.Write(i + " ");
+                        primeNumbers.Add(i);
                 }
             }
+            Display(primeNumbers);
             Console.WriteLine("\n------------------------------------------------------------");
+        }
+        public void CheckAnagramPalindrome()
+        {
+            foreach (var data in primeNumbers)
+            {
+                if (data > 9)
+                {
+                    int sum = 0;
+                    int remainder;
+                    int temp = data;
+                    while (temp > 0)
+                    {
+                        remainder = temp % 10;
+                        sum = sum * 10 + remainder;
+                        temp /= 10;
+                    }
+                    if (sum == data)
+                        primePalindrome.Add(data);
+                }
+            }
+            Console.WriteLine("Prime Numbers that are Palindrome between given range are: ");
+            Display(primePalindrome);
+        }
+        public void Display(List<int> list)
+        {
+            foreach(var data in list)
+            {
+                Console.Write(data + " ");
+            }
+            Console.WriteLine("\n");
         }
     }
 }
