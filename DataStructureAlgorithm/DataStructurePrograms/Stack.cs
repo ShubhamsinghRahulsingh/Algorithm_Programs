@@ -28,14 +28,15 @@ namespace DataStructureAlgorithm.DataStructurePrograms
             this.top = node;
             Console.WriteLine("{0} pushed to stack", value);
         }
-        public void Peek()//will return top value but not delete it
+        public bool Peek()//will return top value but not delete it
         {
             if (this.top == null)
             {
                 Console.WriteLine("Stack is Empty");
-                return;
+                return true;
             }
             Console.WriteLine("{0} is in the top of the stack", this.top.data);
+            return false;
         }
         public void Pop()//will delete top data nd return
         {

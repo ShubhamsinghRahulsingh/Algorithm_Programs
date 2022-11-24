@@ -20,7 +20,12 @@ namespace DataStructureAlgorithm.DataStructurePrograms
                 if (data.Equals(")"))
                     stack.Pop();
             }
-            stack.Peek();
+            if(stack.Peek())
+            {
+                Console.WriteLine("Arithmatic Expression is balanced");
+            }
+            else
+                Console.WriteLine("Arithmatic Expression is not balanced");
         }
     }
 }
