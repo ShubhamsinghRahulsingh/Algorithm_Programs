@@ -18,7 +18,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.PrimeNumbersBetweenGivenRange\n7.CheckAnagramAndPalindrome\n8.UnOrdered List\n9.Ordered List\n10.Balanced Paranthesis\n11.BankingCashCounter\n12.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.MergeSort\n5.CheckForAnagram\n6.UpdateMessageAfterUserInput\n7.PrimeNumbersBetweenGivenRange\n8.CheckAnagramAndPalindrome\n9.UnOrdered List\n10.Ordered List\n11.Balanced Paranthesis\n12.BankingCashCounter\n13.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -40,39 +40,47 @@ class Program
                     bubblesort.Sort(array);
                     break;
                 case 4:
+                    MergeSort mergeSort = new MergeSort();
+                    Console.WriteLine("Array Before Sorting: ");
+                    mergeSort.Display(array2);
+                    mergeSort.Merge_Sort(array2, 0, array2.Length - 1);
+                    Console.WriteLine("Array after Sorting: ");
+                    mergeSort.Display(array2);
+                    break;
+                case 5:
                     Anagram check = new Anagram();
                     check.CheckAnagram("heart", "earth");
                     break;
-                case 5:
+                case 6:
                     MessageDemonstration replace=new MessageDemonstration();
                     replace.ReplaceString();
                     break;
-                case 6:
+                case 7:
                     PrimeNumbers range = new PrimeNumbers();
                     range.PrimeNumberRange(1, 100);
                     break;
-                case 7:
+                case 8:
                     PrimeNumbers primePalindrome = new PrimeNumbers();
                     primePalindrome.PrimeNumberRange(100, 500);
                     primePalindrome.CheckAnagramPalindrome();
                     break;
-                case 8:
+                case 9:
                     UnOrderedList unOrderedList = new UnOrderedList();
                     unOrderedList.ReadAllTextFile(binaryTextPath);
                     break;
-                case 9:
+                case 10:
                     OrderedList orderedList = new OrderedList();
                     orderedList.ReadTextFile(numberTextPath);
                     break;
-                case 10:
+                case 11:
                     BalancedParanthesis checkk=new BalancedParanthesis();
                     checkk.ReadTextFile(paranthesisTextPath);
                     break;
-                case 11:
+                case 12:
                     BankingCashCounter cash = new BankingCashCounter();
                     cash.ReadAllTextFile(bankingTextPath);
                     break;
-                case 12:
+                case 13:
                     flag = false;
                     break;
             }
