@@ -8,6 +8,7 @@ class Program
     public static string binaryTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\BinarySearch.txt";
     public static string numberTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\NumberFile.txt";
     public static string paranthesisTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\BalancedParanthesis.txt";
+    public static string bankingTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\PersonsInATM.txt";
     public static void Main(string[] args)
     {
         int[] array = { 5, 1, 8, 7, 2, 4, 6, 9, 3, 10 };
@@ -17,7 +18,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.PrimeNumbersBetweenGivenRange\n7.CheckAnagramAndPalindrome\n8.UnOrdered List\n9.Ordered List\n10.Balanced Paranthesis\n11.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.CheckForAnagram\n5.UpdateMessageAfterUserInput\n6.PrimeNumbersBetweenGivenRange\n7.CheckAnagramAndPalindrome\n8.UnOrdered List\n9.Ordered List\n10.Balanced Paranthesis\n11.BankingCashCounter\n12.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -68,6 +69,10 @@ class Program
                     checkk.ReadTextFile(paranthesisTextPath);
                     break;
                 case 11:
+                    BankingCashCounter cash = new BankingCashCounter();
+                    cash.ReadAllTextFile(bankingTextPath);
+                    break;
+                case 12:
                     flag = false;
                     break;
             }
