@@ -78,7 +78,7 @@ class Program
                     break;
                 case 12:
                     BankingCashCounter cash = new BankingCashCounter();
-                    cash.ReadAllTextFile(bankingTextPath);
+                    cash.ReadAllTextFile(bankingTextPath,120000);
                     break;
                 case 13:
                     flag = false;

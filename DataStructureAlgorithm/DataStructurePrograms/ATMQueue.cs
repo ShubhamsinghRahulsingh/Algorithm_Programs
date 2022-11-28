@@ -36,6 +36,7 @@ namespace DataStructureAlgorithm.DataStructurePrograms
             }
             else
             {
+                Console.WriteLine("Thank you {0} for visiting", head.data);
                 this.head = this.head.next;
             }
         }

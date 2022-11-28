@@ -12,8 +12,9 @@ namespace DataStructureAlgorithm.DataStructurePrograms
     {
         ATMQueue<string> queue;
         int totalAmount;
-        public void ReadAllTextFile(string filepath)
+        public void ReadAllTextFile(string filepath,int amount )
         {
+            this.totalAmount = amount;
             string line = File.ReadAllText(filepath);
             string[] words = line.Split(",");
             queue = new ATMQueue<string>();
@@ -22,12 +23,12 @@ namespace DataStructureAlgorithm.DataStructurePrograms
                 queue.Enqueue(word);
             }
             queue.Display();
-            Console.Write("Total Amount Available in ATM Initially :");
-            totalAmount=Convert.ToInt32(Console.ReadLine());
+            Console.Write("Total Amount Available in ATM: "+totalAmount);
+          //  totalAmount=Convert.ToInt32(Console.ReadLine());
             foreach(var word in words)
             {
-                Console.WriteLine("************ WELCOME TO ATM *****************");
-                Console.WriteLine("\nSelect what you want to Do\n1.Deposit Amount\n2.Withdraw Amount");
+                Console.WriteLine("\n******Hello {0} Welcome*******\nTell What you want to Do ",word);
+                Console.WriteLine("1.Deposit Amount\n2.Withdraw Amount");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -46,6 +47,7 @@ namespace DataStructureAlgorithm.DataStructurePrograms
             Console.Write("Enter the amount you want to Deposit: ");
             int deposit = Convert.ToInt32(Console.ReadLine());
             totalAmount += deposit;
+            Console.WriteLine("Your Amount is deposited Successfully");
             queue.Dequeue();
         }
         public void Withdraw()
@@ -57,6 +59,7 @@ namespace DataStructureAlgorithm.DataStructurePrograms
                 if (withdraw <= 40000)
                 {
                     totalAmount -= withdraw;
+                    Console.WriteLine("Amount is Withdrawn.");
                     queue.Dequeue();
                 }
                 else
