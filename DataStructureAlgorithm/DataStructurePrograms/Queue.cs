@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace DataStructureAlgorithm.DataStructurePrograms
 {
-    public class ATMQueue<T>
+    public class Queue<T>
     {
         Node<T> head = null;
         public void Enqueue(T data)
@@ -31,12 +31,12 @@ namespace DataStructureAlgorithm.DataStructurePrograms
         {
             if (this.head == null)
             {
-                Console.WriteLine("ATM Queue is Empty.");
+                Console.WriteLine("Queue is Empty.");
                 return;
             }
             else
             {
-                Console.WriteLine("Thank you {0} for visiting", head.data);
+               // Console.WriteLine("Thank you {0} for visiting", head.data);
                 this.head = this.head.next;
             }
         }
@@ -48,7 +48,7 @@ namespace DataStructureAlgorithm.DataStructurePrograms
                 Console.WriteLine("Queue is Empty");
                 return;
             }
-            Console.WriteLine("ATM Queue is as:");
+            Console.WriteLine("Queue is as:");
             while (temp != null)
             {
                 Console.WriteLine(temp.data + " ");

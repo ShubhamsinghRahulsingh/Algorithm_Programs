@@ -9,6 +9,7 @@ class Program
     public static string numberTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\NumberFile.txt";
     public static string paranthesisTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\BalancedParanthesis.txt";
     public static string bankingTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\PersonsInATM.txt";
+    public static string palindromeFilePath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\Palindrome.txt";
     public static void Main(string[] args)
     {
         int[] array = { 5, 1, 8, 7, 2, 4, 6, 9, 3, 10 };
@@ -18,7 +19,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.MergeSort\n5.CheckForAnagram\n6.UpdateMessageAfterUserInput\n7.PrimeNumbersBetweenGivenRange\n8.CheckAnagramAndPalindrome\n9.UnOrdered List\n10.Ordered List\n11.Balanced Paranthesis\n12.BankingCashCounter\n13.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.MergeSort\n5.CheckForAnagram\n6.UpdateMessageAfterUserInput\n7.PrimeNumbersBetweenGivenRange\n8.CheckAnagramAndPalindrome\n9.UnOrdered List\n10.Ordered List\n11.Balanced Paranthesis\n12.BankingCashCounter\n13.PalindromeCheckForString\n14.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -81,6 +82,10 @@ class Program
                     cash.ReadAllTextFile(bankingTextPath,120000);
                     break;
                 case 13:
+                    PalindromeChecker palindromeChecker = new PalindromeChecker();
+                    palindromeChecker.ReadAllTextFile(palindromeFilePath);
+                    break;
+                case 14:
                     flag = false;
                     break;
             }

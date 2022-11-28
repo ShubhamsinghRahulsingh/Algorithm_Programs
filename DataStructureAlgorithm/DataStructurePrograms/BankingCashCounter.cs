@@ -10,14 +10,14 @@ namespace DataStructureAlgorithm.DataStructurePrograms
 {
     public class BankingCashCounter
     {
-        ATMQueue<string> queue;
+        Queue<string> queue;
         int totalAmount;
         public void ReadAllTextFile(string filepath,int amount )
         {
             this.totalAmount = amount;
             string line = File.ReadAllText(filepath);
             string[] words = line.Split(",");
-            queue = new ATMQueue<string>();
+            queue = new Queue<string>();
             foreach (var word in words)
             {
                 queue.Enqueue(word);
