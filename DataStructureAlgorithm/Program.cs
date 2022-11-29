@@ -10,6 +10,7 @@ class Program
     public static string paranthesisTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\BalancedParanthesis.txt";
     public static string bankingTextPath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\PersonsInATM.txt";
     public static string palindromeFilePath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\Palindrome.txt";
+    public static string hashFilePath = @"D:\GitRepository\Algorithm_Programs\DataStructureAlgorithm\Files\Hash.txt";
     public static void Main(string[] args)
     {
         int[] array = { 5, 1, 8, 7, 2, 4, 6, 9, 3, 10 };
@@ -19,7 +20,7 @@ class Program
         while(flag)
         {
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.MergeSort\n5.CheckForAnagram\n6.UpdateMessageAfterUserInput\n7.PrimeNumbersBetweenGivenRange\n8.CheckAnagramAndPalindrome\n9.UnOrdered List\n10.Ordered List\n11.Balanced Paranthesis\n12.BankingCashCounter\n13.PalindromeCheckForString\n14.Exit");
+            Console.WriteLine("1.BinarySearch\n2.InsertionSort\n3.BubbleSort\n4.MergeSort\n5.CheckForAnagram\n6.UpdateMessageAfterUserInput\n7.PrimeNumbersBetweenGivenRange\n8.CheckAnagramAndPalindrome\n9.UnOrdered List\n10.Ordered List\n11.Balanced Paranthesis\n12.BankingCashCounter\n13.PalindromeCheckForString\n14.HashingFunction\n15.Exit");
             Console.Write("Select any one from the above option: ");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -86,6 +87,12 @@ class Program
                     palindromeChecker.ReadAllTextFile(palindromeFilePath);
                     break;
                 case 14:
+                    Hashing hash = new Hashing();
+                    hash.ReadTextFile(hashFilePath);
+                    hash.Operation();
+                    hash.DisplayLinkedList();
+                    break;
+                case 15:
                     flag = false;
                     break;
             }
